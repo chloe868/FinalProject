@@ -36,10 +36,12 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5n7aZgbqT4cCtgMxQqDk3nw5Nht5fR4BbzGsIrP8k877smse&s"></v-img>
+            <v-img height="250" width="300" src="https://d2pa5gi5n2e1an.cloudfront.net/ph/images/car_models/Subaru_WRX_STI/2/main/L_1.jpg"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1></h1>
+            <h1>Subaru WRX STI</h1>
+            <h2>P2000 per day</h2>
+            <h3></h3>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -68,10 +70,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://www.cartrack.co.za/sites/default/files/car.jpg"></v-img>
+            <v-img height="250" width="300" src="https://www.suzuki-zambia.com/media/gamme/modeles/graph/2524-photo-suzuki-alto-k10.png"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Zuzuki Alto</h1>
+            <h2>P1500 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -100,10 +103,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Kia-Seltos/6232/1562746799300/front-left-side-47.jpg?tr-371,e-sharpen"></v-img>
+            <v-img height="250" width="300" src="https://images.dealer.com/ddc/vehicles/2019/Hyundai/Santa%20Fe%20XL/SUV/trim_SE_f0031a/color/Becketts%20Black-RB5-8%2C8%2C8-640-en_US.jpg"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Hyundai XL HY01674T</h1>
+              <h2>P2500 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -135,7 +139,8 @@
             <v-img height="250" width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQs7kaoUewSBHa7T6rUyWHNdqUuKnCwvuAAexV7xdkPy4w4a2D&s"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Yamaha FZi</h1>
+            <h2>P2000 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -167,7 +172,8 @@
             <v-img height="250" width="300" src="https://hondaph.com/wp-content/uploads/2019/09/XRM_MOTARD_RED.png"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Honda XRM 125 DS Fi</h1>
+            <h2>P1500 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -196,10 +202,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/motorcycle/Honda_Wave_125/Honda_Wave_125_L_1.jpg"></v-img>
+            <v-img height="250" width="300" src="https://emcor.com.ph/wp-content/uploads/2019/04/Wave-110-Alpha-Black.jpg"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Honda Wave Alpha Spokes</h1>
+            <h2>P1000 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -231,7 +238,8 @@
             <v-img height="250" width="300" src="https://southwesttours.ph/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/v/a/van_6_2.png"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>TR-BOR-VAN-CAT</h1>
+            <h2>P1700 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -260,10 +268,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://static.wixstatic.com/media/2a66ae_08c1ea91371d4602bc214a21a6d46d7e~mv2.jpg/v1/fill/w_838,h_558,al_c,lg_1,q_85/2a66ae_08c1ea91371d4602bc214a21a6d46d7e~mv2.jpg"></v-img>
+            <v-img height="250" width="300" src="http://perthsuretaxi.com/images/ser-img3.jpg"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Taxi van</h1>
+            <h2>P2500 per day </h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -295,7 +304,8 @@
             <v-img height="250" width="300" src="http://toyota.com.ph/wp-content/uploads/2018/06/HH1303-F-01.png"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Toyota Hiace 3.0TD Minibus</h1>
+            <h2>P3500 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -324,10 +334,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://www.comparabus.com/bundles/static/uploads/FlixBus/flixbus-bus-pas-cher.png"></v-img>
+            <v-img height="250" width="300" src="https://www.bharatbenz.com/uploads/product_images/main_1532432736.png"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>BharatBenz</h1>
+            <h2>P3000 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -356,10 +367,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-o1gYHkr_RZqc8fSsRRqVkTzI4rnNTnNIPMRGDy6pkCyKycgB&s"></v-img>
+            <v-img height="250" width="300" src="http://designmella.com/images/bus-passenger-bus.png"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>Jan Bus</h1>
+            <h2>P2500 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -388,10 +400,11 @@
       <v-container>
         <v-row justify="space-between">
           <v-col cols="auto">
-            <v-img height="250" width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAYN7q44EQTpXGCeRGgm8jg3lMt-MXZIsgp0N_TQCOdm1KewU&s"></v-img>
+            <v-img height="250" width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmCvga2xBbSBzDGZETF_ueWyNWzvGgsgBTiAvT8j96VhHy3h4v&s"></v-img>
           </v-col>
           <v-col class="mb-3">
-            <h1>FNDSajufasdf</h1>
+            <h1>IC bus</h1>
+            <h2>P3000 per day</h2>
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <v-col cols="auto" class="text-center pl-0">
@@ -512,13 +525,16 @@
         </v-row>
       </v-container>
     </v-card>
+        <Footer></Footer>
   </div>
 </template>
 <script>
   import Header from "../components/Header.vue"
+  import Footer from "../components/Footer.vue"
   export default {
     components: {
-      Header
+      Header,
+      Footer
     },
     data() {
       return {
@@ -600,6 +616,6 @@
   }
   .row-one {
     margin-right: 20%;
-    margin-left: 20%;
+    margin-left: 25%;
   }
 </style>
