@@ -3,13 +3,13 @@
     <Header></Header>
     <section class="search-sec">
       <div class="container">
-        <form action="#" method="post" novalidate="novalidate">
+        <form  method="post" novalidate="novalidate">
           <div class="row">
             <div class="col-lg-12">
               <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <div class="form-control search-slt">
-                    <v-select :items="items" placeholder="choose your options" standard></v-select>
+                    <v-select :items="items" name="input-10-1" label="choose your options" standard></v-select>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -83,7 +83,12 @@
     padding: 12px;
     margin-right: auto;
     margin-left: auto;
+    /* border: 2px solid cyan;
+     opacity: 0.6;
+     background-color:black
+     */
   }
+ 
 </style>
 <script>
   import Header from "../components/Header.vue"

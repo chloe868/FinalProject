@@ -1,18 +1,18 @@
 <template>
   <div>
-    <Header></Header>
+    <Header id="head"></Header>
     <form action="#" method="post" novalidate="novalidate">
       <div class="row-one">
         <div class="col-lg-12">
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
               <div class="form-control search-slt">
-                <v-select :items="items" placeholder="choose your options" standard></v-select>
+                <v-select :items="items" name="input-10-1" label="choose your options" standard></v-select>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
               <div class="form-control search-slt">
-                <v-text-field type="text" placeholder="location" />
+              <v-text-field type="text"  name="input-10-1" label="location" />
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -553,6 +553,8 @@
 <style scoped>
   .container {
     width: 150%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .row[data-v-109177d0] {
     display: flex;
@@ -571,11 +573,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+   flex: 1 1 auto;
     margin-right: -12px;
     margin-left: -12px;
     margin-top: 50px;
@@ -615,7 +614,11 @@
     margin-top: -14px;
   }
   .row-one {
-    margin-right: 20%;
+    margin-right:15%;
     margin-left: 25%;
+    margin-top: 5%
+  }
+  #head{
+    background-color:whitesmoke;
   }
 </style>

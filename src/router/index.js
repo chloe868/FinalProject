@@ -30,7 +30,10 @@ const routes = [
     path:"/login",
     name:"login",
     component: () =>
-    import(/* webpackChunkName: "about" */ "../views/Login.vue")
+    import(/* webpackChunkName: "about" */ "../views/Login.vue"),
+    meta:{
+      tokenRequired: true
+    }
 
   },
   {
