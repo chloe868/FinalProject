@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <v-card :loading="loading" class="mx-auto my-12" max-width="800">
     <v-subheader height="200">
       <h1>Reservation Form</h1>
@@ -23,6 +24,7 @@
       </v-btn>
     </v-card-actions>
   </v-card>
+  </div>
 </template>
 <script>
   export default {
@@ -39,6 +41,14 @@
   }
 </script>
 <style scoped>
+.container{
+  border:2px solid grey;
+  margin-top:5%;
+  width:85%;
+  
+  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/chattanooga-riverwalk-night-black-and-white-larry-underwood.jpg");
+  background-size: 100%;
+}
   .v-card:not(.v-sheet--tile):not(.v-card--shaped) {
     border-radius: 4px;
     /* -webkit-text-stroke-width: thick; */
