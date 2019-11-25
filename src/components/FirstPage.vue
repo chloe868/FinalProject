@@ -11,7 +11,6 @@
                   <div class="form-control search-slt">
                     <v-select
                       :items="items"
-                      v-model="options"
                       name="input-10-1"
                       label="choose your options"
                       standard
@@ -22,7 +21,6 @@
                   <div class="form-control search-slt">
                     <v-text-field
                       type="text"
-                      v-model="location"
                       name="input-10-1"
                       label="location"
                     />
@@ -32,7 +30,6 @@
                   <div class="form-control search-slt">
                     <v-text-field
                       type="date"
-                      v-model="dater"
                       :prepend-icon="'mdi-calendar'"
                       name="input-10-1"
                       label="date reserved"
@@ -43,7 +40,6 @@
                   <div class="form-control search-slt">
                     <v-text-field
                       type="date"
-                      v-model="date"
                       :prepend-icon="'mdi-calendar'"
                       name="input-10-1"
                       label="date returned"
@@ -126,16 +122,15 @@ export default {
       dater: new Date(),
       location:" ",
       options:"",
+    
       
     };
   },
   methods: {
     search() {
-      if (options == "" && location == "" && date == "" && dater == "") {
-        this.alert("required");
-      } else {
+      
         this.$router.push("/mainpage");
-      }
+      
     }
   }
 };
