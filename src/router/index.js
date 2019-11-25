@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import MainPage from "../components/MainPage";
 import FirstPage from "../components/FirstPage";
 import Reserved from "../components/Reserved";
+import Practice from "../components/Practice";
 Vue.use(VueRouter);
 
 const routes = [
@@ -22,6 +23,14 @@ const routes = [
     path:"/mainpage",
     name:"mainpage",
     component:MainPage,
+    meta: {
+        tokenRequired: false
+    }
+  },
+  {
+    path:"/practice",
+    name:"practice",
+    component:Practice,
     meta: {
         tokenRequired: false
     }
