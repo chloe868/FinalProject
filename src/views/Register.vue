@@ -1,30 +1,31 @@
 <template>
+<div class="container">
     <div class="flex-wrap">
-        <fieldset>
-            <form action novalidate>
+        <v-fieldset>
+            <v-form action novalidate>
                 <input type="radio" name="rg" id="sign-in" checked/>
                 <input type="radio" name="rg" id="sign-up" />
-                <input type="radio" name="rg" id="reset" />
-                <label for="sign-in">Company</label>
-                <label for="sign-up">Customer</label>
+                <label for="sign-up">Company</label>
+                <label for="sign-in">Customer</label>
                 <input class=" sign-in" type="text" placeholder="Lastname" />
                 <input class=" sign-in" type="text" placeholder="Firstname" />
                 <input class=" sign-in" type="date" placeholder="birthday" />
                 <input class=" sign-in" type="text" placeholder="Address" />
-                <input class=" sign-in" type="number" placeholder="age" />
+                <input class=" sign-in" type="number" min="0" placeholder="age" />
                 <input class=" sign-in" type="email" placeholder="Email" />
                 <input class=" sign-in" type="password" placeholder="Password" />
-                <input class=" sign-in" type="number" placeholder="conatact number" />
-                <input class=" sign-in" type="number" placeholder="driver_liscense number" />
+                <input class=" sign-in" type="min" min="0" placeholder="contact number" />
+                <input class=" sign-in" type="number" min="0" placeholder="driver_liscense number" />
                 <input class="sign-up" type="text" placeholder="Company Name" />
                 <input class="sign-up" type="text" placeholder="Company Address" />
-                <input class="sign-up" type="number" placeholder=" Conatact Number" />
+                <input class="sign-up" type="number" min="0" placeholder=" Contact Number" />
                 <input class="sign-up" type="email" placeholder=" Email" />
                 <input class="sign-up" type="password" placeholder=" Password" />
                 <button>Submit</button>
-            </form>
-        </fieldset>
+            </v-form>
+        </v-fieldset>
     </div>
+</div>
 </template>
 <style lang="scss" scoped>
     $color-body: black;
@@ -39,13 +40,13 @@
         background-color: $color-input;
         display: block;
         transition: 300ms ease;
-        border-radius: 7px;
+        border-radius: 20px;
         border: 0;
         max-height: 0;
         margin: 0;
         padding: 0 10px;
         overflow: hidden;
-        width: 500px;
+        width: 400px;
         opacity: 0;
         font-size: 16px;
         text-align: center;
@@ -62,7 +63,7 @@
         width: 250px;
         height: 40px;
         border-radius: 7px;
-        background-color: $color-accent;
+        background-color:#FF6600;
         font-size: 0;
         &:before {
             font-size: 16px;
@@ -105,12 +106,19 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        height: 300px;
+        height: auto;
         text-align: center;
     }
     body {
         background-color: $color-body;
         font-size: 16px;
+    }
+    .container{
+        margin-top: 100px;
+        margin-left: 30%;
+        margin-right: 20%;
+        width:450px;
+        background-color:#FF66FF;
     }
 </style>
 <script>
