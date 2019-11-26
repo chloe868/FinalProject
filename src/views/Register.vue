@@ -1,214 +1,120 @@
 <template>
-    <div class="container register">
-                <div class="row">
-                    <div class="col-md-3 register-left">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
-                        <p>You are 30 seconds away from earning your own money!</p>
-                        <input type="submit" name="" value="Login"/><br/>
-                    </div>
-                    <div class="col-md-9 register-right">
-                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Apply as a Employee</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="maxl">
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="male" checked>
-                                                    <span> Male </span> 
-                                                </label>
-                                                <label class="radio inline"> 
-                                                    <input type="radio" name="gender" value="female">
-                                                    <span>Female </span> 
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
-                                        </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <h3  class="register-heading">Apply as a Hirer</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="form-control">
-                                                <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="`Answer *" value="" />
-                                        </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <div class="flex-wrap">
+        <fieldset>
+            <form action novalidate>
+                <input type="radio" name="rg" id="sign-in" checked/>
+                <input type="radio" name="rg" id="sign-up" />
+                <input type="radio" name="rg" id="reset" />
+                <label for="sign-in">Company</label>
+                <label for="sign-up">Customer</label>
+                <input class=" sign-in" type="text" placeholder="Lastname" />
+                <input class=" sign-in" type="text" placeholder="Firstname" />
+                <input class=" sign-in" type="date" placeholder="birthday" />
+                <input class=" sign-in" type="text" placeholder="Address" />
+                <input class=" sign-in" type="number" placeholder="age" />
+                <input class=" sign-in" type="email" placeholder="Email" />
+                <input class=" sign-in" type="password" placeholder="Password" />
+                <input class=" sign-in" type="number" placeholder="conatact number" />
+                <input class=" sign-in" type="number" placeholder="driver_liscense number" />
+                <input class="sign-up" type="text" placeholder="Company Name" />
+                <input class="sign-up" type="text" placeholder="Company Address" />
+                <input class="sign-up" type="number" placeholder=" Conatact Number" />
+                <input class="sign-up" type="email" placeholder=" Email" />
+                <input class="sign-up" type="password" placeholder=" Password" />
+                <button>Submit</button>
+            </form>
+        </fieldset>
+    </div>
 </template>
-<style  scoped>
-.register{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-    margin-top: 3%;
-    padding: 3%;
-}
-.register-left{
-    text-align: center;
-    color: #fff;
-    margin-top: 4%;
-}
-.register-left input{
-    border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    width: 60%;
-    background: #f8f9fa;
-    font-weight: bold;
-    color: #383d41;
-    margin-top: 30%;
-    margin-bottom: 3%;
-    cursor: pointer;
-}
-.register-right{
-    background: #f8f9fa;
-    border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;
-}
-.register-left img{
-    margin-top: 15%;
-    margin-bottom: 5%;
-    width: 25%;
-    -webkit-animation: mover 2s infinite  alternate;
-    animation: mover 1s infinite  alternate;
-}
-@-webkit-keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-@keyframes mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
-}
-.register-left p{
-    font-weight: lighter;
-    padding: 12%;
-    margin-top: -9%;
-}
-.register .register-form{
-    padding: 10%;
-    margin-top: 10%;
-}
-.btnRegister{
-    float: right;
-    margin-top: 10%;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 2%;
-    background: #0062cc;
-    color: #fff;
-    font-weight: 600;
-    width: 50%;
-    cursor: pointer;
-}
-.register .nav-tabs{
-    margin-top: 3%;
-    border: none;
-    background: #0062cc;
-    border-radius: 1.5rem;
-    width: 28%;
-    float: right;
-}
-.register .nav-tabs .nav-link{
-    padding: 2%;
-    height: 34px;
-    font-weight: 600;
-    color: #fff;
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-}
-.register .nav-tabs .nav-link:hover{
-    border: none;
-}
-.register .nav-tabs .nav-link.active{
-    width: 100px;
-    color: #0062cc;
-    border: 2px solid #0062cc;
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-}
-.register-heading{
-    text-align: center;
-    margin-top: 8%;
-    margin-bottom: -15%;
-    color: #495057;
-}
+<style lang="scss" scoped>
+    $color-body: black;
+    $color-accent:blue;
+    $color-input: white; //    fix position radio input off-canvas
+    input[type="radio"] {
+        position: fixed;
+        left: -100px;
+    } //    style input fields (note hidden by default) 
+    input:not([type="radio"]) {
+        appearance: none;
+        background-color: $color-input;
+        display: block;
+        transition: 300ms ease;
+        border-radius: 7px;
+        border: 0;
+        max-height: 0;
+        margin: 0;
+        padding: 0 10px;
+        overflow: hidden;
+        width: 500px;
+        opacity: 0;
+        font-size: 16px;
+        text-align: center;
+        outline: 0;
+    } //    show input based on radio selection 
+    [id="sign-in"]:checked~input.sign-in,
+    [id="sign-up"]:checked~input.sign-up {
+        max-height: 40px;
+        padding: 10px;
+        margin: 10px 0;
+        opacity: 1;
+    } //    submit button 
+    button {
+        width: 250px;
+        height: 40px;
+        border-radius: 7px;
+        background-color: $color-accent;
+        font-size: 0;
+        &:before {
+            font-size: 16px;
+        }
+    } //    show botton text based on radio selection
+    [id="sign-in"]:checked~button:before {
+        content: 'Sign In';
+    }
+    [id="sign-up"]:checked~button:before {
+        content: 'Sign Up';
+    } //            
+    label {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        font-weight: 700;
+        cursor: pointer;
+        color: $color-accent;
+        transition: 300ms ease;
+        width: calc(100% / 3 - 4px); //    pointer arrow
+        &:after {
+            content: '';
+            border: 10px solid transparent;
+            position: absolute;
+            bottom: -10px;
+            left: calc(50% - 10px);
+            transition: inherit;
+        }
+    } //     set active label marker
+    [id="sign-in"]:checked~[for="sign-in"],
+    [id="sign-up"]:checked~[for="sign-up"] {
+        color: $color-input;
+        &:after {
+            border-bottom-color: $color-input;
+        }
+    } //    flex does not work well on fiedset 
+    //    why we use a styling wrapper
+    .flex-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 300px;
+        text-align: center;
+    }
+    body {
+        background-color: $color-body;
+        font-size: 16px;
+    }
 </style>
+<script>
+export default {
+    
+}
+</script>

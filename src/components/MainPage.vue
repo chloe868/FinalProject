@@ -53,12 +53,10 @@
             <hr style="width:250px;" />
             <h1 v-text="item.color"></h1>
             <h2 v-text="item.brand"></h2>
-            {{ key }} {{ val }}
             <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
           <div class="vertical"></div>
           <v-col>
-            {{ key }} {{ val }}
             <v-card-title v-text="item.company"></v-card-title>
              <v-card-subtitle v-text="item.sitcap"></v-card-subtitle>
           </v-col>
@@ -173,7 +171,8 @@ export default {
     ],
     itemsone: ["car", "van", "bus", "m otorcycle", "boat"],
       date: new Date(),
-      dater: new Date()
+      dater: new Date(),
+       rating: 3
   }),
   methods: {
     reserved() {
@@ -184,7 +183,7 @@ export default {
 </script>
 <style scoped>
 .vertical {
-  border-left: 1px solid grey;
+  border-left: 2px solid grey;
   height: 260px;
   margin-left: -25%;
   margin-top: 1%;

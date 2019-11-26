@@ -41,14 +41,6 @@
   }
 </script>
 <style scoped>
-.container{
-  border:2px solid grey;
-  margin-top:5%;
-  width:85%;
-  
-  background-image: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/chattanooga-riverwalk-night-black-and-white-larry-underwood.jpg");
-  background-size: 100%;
-}
   .v-card:not(.v-sheet--tile):not(.v-card--shaped) {
     border-radius: 4px;
     /* -webkit-text-stroke-width: thick; */
