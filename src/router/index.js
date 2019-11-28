@@ -49,8 +49,10 @@ const routes = [
     path:"/register",
     name:"register",
     component: () =>
-    import(/* webpackChunkName: "about" */ "../views/Register.vue")
-
+    import(/* webpackChunkName: "about" */ "../views/Register.vue"),
+    meta: {
+      tokenRequired: false
+    }
   },
   {
     path:"/reserved",

@@ -11,6 +11,7 @@ for (const component in mdbvue) {
 }
 
 Vue.config.productionTip = false;
+
 new Vue({
   router,
   vuetify,

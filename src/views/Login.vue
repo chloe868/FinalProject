@@ -11,9 +11,6 @@
         </v-row>
       </v-card-text>
       <v-divider class="mx-4"></v-divider>
-      <!-- <v-card-actions> -->
-        <!-- <v-btn color="deep-purple accent-4" >Login</v-btn> -->
-      <!-- </v-card-actions> -->
        <v-card-actions>
         <v-btn  id="customer">Customer</v-btn>
         <v-btn id="company" >Company</v-btn>

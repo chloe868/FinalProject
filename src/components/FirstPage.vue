@@ -101,7 +101,7 @@
         valid:true,
         date:null,
         dater:null,
-        location: '',
+        location: null,
         locationRules: [
           v => !!v || 'Location is required'
         ],
@@ -117,7 +117,9 @@
     },
     methods: {
       search() {
+          
           this.$router.push("/mainpage");
+        
        }  
     }
   };
