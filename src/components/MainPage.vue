@@ -26,9 +26,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-              <button type="button" class="btn btn-primary wrn-btn" @click="search()">
-                    <a >search</a>
-                  </button>
+              <button type="button" class="btn btn-primary wrn-btn" @click="search()"> <a >search</a></button>
             </div>
           </div>
         </div>
@@ -42,22 +40,23 @@
           </v-col>
           <v-col class="col-6">
             <v-card-title class="headline" v-text="item.itemname"></v-card-title>
-            
             <div>
               <v-rating v-model="rating"></v-rating>
             </div>
             <hr style="width:250px;" />
-            <h1 v-text="item.color"></h1>
-            <h2 v-text="item.brand"></h2>
-            <v-btn class="primary" @click="reserved()">Reserved</v-btn>
+            <v-card-title class="headline" v-text="item.status"></v-card-title>
+            <v-card-title class="headline" v-text="item.location"></v-card-title>
           </v-col>
           <div class="vertical"></div>
           <v-col class="col-3">
-         <v-card-title v-text="item.price"></v-card-title>
+            <v-card-title v-text="item.price"></v-card-title>
             <v-card-subtitle v-text="item.sitcap"></v-card-subtitle>
+            <v-card-subtitle v-text="item.color"></v-card-subtitle>
+            <v-card-subtitle v-text="item.brand"></v-card-subtitle>
+            <v-btn class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
-           <div class="verticalone"></div>
-          <v-col class="col=6" >
+          <div class="verticalone"></div>
+          <v-col class="col=6">
             <v-card-title v-text="item.company"></v-card-title>
             <v-card-subtitle v-text="item.sitcap"></v-card-subtitle>
           </v-col>
@@ -78,7 +77,9 @@
     },
     data: () => ({
       items: [{
-          color:  "Color: Blue",
+          status: "available",
+          location: "Mandaue,City",
+          color: "Color: Blue",
           src: "https://images.dealer.com/ddc/vehicles/2019/Hyundai/Santa%20Fe%20XL/SUV/trim_SE_f0031a/color/Becketts%20Black-RB5-8%2C8%2C8-640-en_US.jpg",
           itemname: "Hyundai XL HY01674",
           price: "P1000 per day",
@@ -87,6 +88,8 @@
           sitcap: "Sitting capacity: 4 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Colro: orange",
           src: "https://www.suzuki-zambia.com/media/gamme/modeles/graph/2524-photo-suzuki-alto-k10.png",
           itemname: "Zuzuki Alto",
@@ -96,6 +99,8 @@
           sitcap: "Sitting capacity: 4 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: Black",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQs7kaoUewSBHa7T6rUyWHNdqUuKnCwvuAAexV7xdkPy4w4a2D&s",
           itemname: "Honda XRM 125 DS Fi",
@@ -105,6 +110,8 @@
           sitcap: "Sitting capacity: 2 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color:Black and Red",
           src: "https://hondaph.com/wp-content/uploads/2019/09/XRM_MOTARD_RED.png",
           itemname: "Yamaha FZi",
@@ -114,6 +121,8 @@
           sitcap: " Sitting capacity:2 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: white",
           src: "http://perthsuretaxi.com/images/ser-img3.jpg",
           itemname: "Taxi Van",
@@ -123,6 +132,8 @@
           sitcap: " Sitting capacity:8 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: gray",
           src: "http://toyota.com.ph/wp-content/uploads/2018/06/HH1303-F-01.png",
           itemname: "Foton Trans Van",
@@ -132,24 +143,30 @@
           sitcap: "Sitting capacity: 8 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: white",
-          src: "http://designmella.com/images/bus-passenger-bus.png",
-          itemname: "Halcyon Days",
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVCmNE5VzQD8YWGKepaPZ6a0ioDKFVB2BDLuWGbZsQu43LR0c&s",
+          itemname: "Nathalie Tours",
           price: "P3000 per day",
           brand: "brand: nathalie ",
           company: "nathalie tours",
           sitcap: "Sitting capacity: 34 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: white",
-          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmCvga2xBbSBzDGZETF_ueWyNWzvGgsgBTiAvT8j96VhHy3h4v&s",
-          itemname: "Ceres A5",
+          src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM1_fR7ilTwIeH9KDiJDiznNEbT7XDA0v5E98o99689wFKWB5how&s",
+          itemname: "Catalina Bus Tour",
           price: "P3500 per day",
           brand: "brand: ceres",
           company: "Ceres Company",
           sitcap: "Sitting capacity: 45 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LkhXzxAXZj8qR4D6rM7QJYMeKtUPlQhzoriPu10GPv4mWOYg&s",
           itemname: "Filipino Banka",
@@ -159,6 +176,8 @@
           sitcap: "Sitting capacity: 8 persons"
         },
         {
+          location: "Mandaue,City",
+          status: "available",
           color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxfeR566GQF0vDZJvqq_JZp0ZQAZ-XzCuSkCYVlI717nN-79S&s",
           itemname: "Adventure BAngka",
@@ -184,7 +203,6 @@
       reserved() {
         this.$router.push("/Login");
       },
-      
     }
   };
 </script>
@@ -195,7 +213,7 @@
     margin-left: -25%;
     margin-top: 1%;
   }
-.verticalone {
+  .verticalone {
     border-left: 1px solid grey;
     height: 260px;
     margin-top: 1%;
@@ -230,17 +248,13 @@
     margin-left: -12px;
     margin-top: 50px;
   }
-  .search-sec {
-    padding: 2rem;
-  }
   .search-slt {
     width: 90%;
-    height: calc(3rem + 2px) !important;
+    height:70px;
     font-family: Raleway-SemiBold;
   }
   .datepicker {
     font-size: 16px;
-    height: calc(3rem + 2px) !important;
     font-family: Raleway-SemiBold;
   }
   .col-lg-3 {
@@ -254,9 +268,7 @@
     margin-top: -20px;
     margin-left: 5%;
   }
-  .v-input {
-    margin-top: -14px;
-  }
+  .v-input { margin-top: -14px;}
   .row-one[data-v-109177d0] {
     margin-right: 1%;
     margin-left: 10%;
@@ -265,17 +277,10 @@
   .wrn-btn {
     font-size: 16px;
     width: 200px;
-    height: calc(3rem + 2px) !important;
+    height:70px;
     font-family: Raleway-SemiBold;
   }
-  #head {
-    background-color: whitesmoke;
-  }
-  h1,
-  h2 {
-    font-size: 15px;
-  }
-  .primary {
-    margin-top: 30px;
-  }
+  #head {background-color: whitesmoke;}
+  h1,h2 {font-size: 15px;}
+  .primary {margin-top: 30px;}
 </style>

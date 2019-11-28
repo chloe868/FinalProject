@@ -3,7 +3,7 @@
     <Header></Header>
     <section class="search-sec">
       <div class="container">
-        <v-form  novalidate="novalidate" ref="form" v-model="valid" lazy-validation>
+        <v-form novalidate="novalidate" ref="form" v-model="valid" lazy-validation>
           <div class="row">
             <div class="col-lg-12">
               <div class="row">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <div class="form-control search-slt">
-                    <v-text-field type="date" v-model="date"  :prepend-icon="'mdi-calendar'" name="input-10-1" label="date reserved" required />
+                    <v-text-field type="date" v-model="date" :prepend-icon="'mdi-calendar'" name="input-10-1" label="date reserved" required />
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -28,9 +28,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                  <button type="button" class="btn btn-primary wrn-btn"  :disabled="!valid" @click="search">
-                                <a class="fa fa-search">Search</a>
-                              </button>
+                  <button type="button" class="btn btn-primary wrn-btn" :disabled="!valid" @click="search"> <a>Search</a> </button>
                 </div>
               </div>
             </div>
@@ -41,23 +39,19 @@
   </div>
 </template>
 <style scoped>
-  .search-sec {
-    padding: 2rem;
-  }
   .search-slt {
     width: 90%;
-    height: calc(3rem + 2px) !important;
+    height: 70px;
     font-family: Raleway-SemiBold;
   }
   .wrn-btn {
     font-size: 16px;
     width: 200px;
-    height: calc(3rem + 2px) !important;
+    height: 70px;
     font-family: Raleway-SemiBold;
   }
   .datepicker {
     font-size: 16px;
-    height: calc(3rem + 2px) !important;
     font-family: Raleway-SemiBold;
   }
   option {
@@ -98,9 +92,9 @@
     mounted() {},
     data() {
       return {
-        valid:true,
-        date:null,
-        dater:null,
+        valid: true,
+        date: null,
+        dater: null,
         location: null,
         locationRules: [
           v => !!v || 'Location is required'
@@ -117,10 +111,8 @@
     },
     methods: {
       search() {
-          
-          this.$router.push("/mainpage");
-        
-       }  
+        this.$router.push("/mainpage");
+      }
     }
   };
 </script>
