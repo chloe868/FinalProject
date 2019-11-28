@@ -82,90 +82,90 @@
           src: "https://images.dealer.com/ddc/vehicles/2019/Hyundai/Santa%20Fe%20XL/SUV/trim_SE_f0031a/color/Becketts%20Black-RB5-8%2C8%2C8-640-en_US.jpg",
           itemname: "Hyundai XL HY01674",
           price: "P1000 per day",
-          brand: "Hyundai Company",
+          brand: "brand: Hyundai Company",
           company: " Budget car and Truck Rental",
-          sitcap: "4 persons"
+          sitcap: "Sitting capacity: 4 persons"
         },
         {
           color: "Colro: orange",
           src: "https://www.suzuki-zambia.com/media/gamme/modeles/graph/2524-photo-suzuki-alto-k10.png",
           itemname: "Zuzuki Alto",
           price: "P1500 per day",
-          brand: "zuzuki",
+          brand: "brand: zuzuki",
           company: "Zuzuki Company",
-          sitcap: "4 persons"
+          sitcap: "Sitting capacity: 4 persons"
         },
         {
           color: "Color: Black",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQs7kaoUewSBHa7T6rUyWHNdqUuKnCwvuAAexV7xdkPy4w4a2D&s",
           itemname: "Honda XRM 125 DS Fi",
           price: "P1000 per day",
-          brand: "Honda",
+          brand: "brand: Honda",
           company: "ZG Motorbike rental Cebu",
-          sitcap: "2 persons"
+          sitcap: "Sitting capacity: 2 persons"
         },
         {
           color: "Color:Black and Red",
           src: "https://hondaph.com/wp-content/uploads/2019/09/XRM_MOTARD_RED.png",
           itemname: "Yamaha FZi",
           price: "P1500 per day",
-          brand: "Yamaha",
+          brand: "brand: Yamaha",
           company: "Motorcycle rental in Cebu City",
-          sitcap: "2 persons"
+          sitcap: " Sitting capacity:2 persons"
         },
         {
           color: "Color: white",
           src: "http://perthsuretaxi.com/images/ser-img3.jpg",
           itemname: "Taxi Van",
           price: "P2000 per day",
-          brand: "toyota",
+          brand: "brand: toyota",
           company: " Rent a Van Cebu",
-          sitcap: "8 persons"
+          sitcap: " Sitting capacity:8 persons"
         },
         {
           color: "Color: gray",
           src: "http://toyota.com.ph/wp-content/uploads/2018/06/HH1303-F-01.png",
           itemname: "Foton Trans Van",
           price: "P1000 per day",
-          brand: "nissan",
+          brand: "brand: nissan",
           company: "Mini Van Rental",
-          sitcap: "8 persons"
+          sitcap: "Sitting capacity: 8 persons"
         },
         {
           color: "Color: white",
           src: "http://designmella.com/images/bus-passenger-bus.png",
           itemname: "Halcyon Days",
           price: "P3000 per day",
-          brand: "nathalie ",
+          brand: "brand: nathalie ",
           company: "nathalie tours",
-          sitcap: "34 persons"
+          sitcap: "Sitting capacity: 34 persons"
         },
         {
           color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmCvga2xBbSBzDGZETF_ueWyNWzvGgsgBTiAvT8j96VhHy3h4v&s",
           itemname: "Ceres A5",
           price: "P3500 per day",
-          brand: "ceres",
+          brand: "brand: ceres",
           company: "Ceres Company",
-          sitcap: "45 persons"
+          sitcap: "Sitting capacity: 45 persons"
         },
         {
           color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LkhXzxAXZj8qR4D6rM7QJYMeKtUPlQhzoriPu10GPv4mWOYg&s",
           itemname: "Filipino Banka",
           price: "P5000 per day",
-          brand: "none",
+          brand: "brand: none",
           company: "Boat Design",
-          sitcap: "8 persons"
+          sitcap: "Sitting capacity: 8 persons"
         },
         {
           color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxfeR566GQF0vDZJvqq_JZp0ZQAZ-XzCuSkCYVlI717nN-79S&s",
           itemname: "Adventure BAngka",
           price: "P4000 per day",
-          brand: "none",
+          brand: "brand: none",
           company: "Rise Above",
-          sitcap: "8 persons"
+          sitcap: "Sitting capacity: 8 persons"
         },
       ],
       select: null,
