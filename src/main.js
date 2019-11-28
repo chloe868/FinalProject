@@ -5,6 +5,12 @@ import vuetify from "./plugins/vuetify";
 // import BootstrapVue from 'bootstrap-vue'
 // import 'bootstrap/dist/css/bootstrap.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// import VueAxios from 'vue-axios'
+
+// import axios from './axios'
+
+// Vue.use(VueAxios, axios)
 import * as mdbvue from 'mdbvue'
 for (const component in mdbvue) {
   Vue.component(component, mdbvue[component])

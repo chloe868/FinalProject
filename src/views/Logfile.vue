@@ -56,6 +56,22 @@ export default {
       setTimeout(() => (this.loading = false), 2000);
       this.$router.login("/reserved");
     }
+  },
+  post(){
+
   }
 };
 </script>
+API 😄JS
+import jquery
+import auth from'services/auth'
+imoport config from'src/config.js
+export default  {
+  APIRequest(link,parameter)
+  let BCKEND url =config.BAckendurl+🧡link
+  leturltoken==(AUTH.token.data!==null)? '?tokem=' +Auth.token.data:
+  let urltoken=backendurl+token
+  $.ajax(){
+    
+  }
+})

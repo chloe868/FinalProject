@@ -34,15 +34,15 @@
         </div>
       </div>
     </form>
-    <v-card class="d-inline-block mx-auto" v-for="(item, i) in items" :key="i" cols="12">
+    <v-card class="d-inline-block " v-for="(item, i) in items" :key="i" cols="12">
       <v-container>
         <v-row justify="space-between">
-          <v-col cols="auto">
-            <v-img :src="item.src" style="width:300px;height:250px; border:2px solid grey;"></v-img>
+          <v-col class="col-3">
+            <v-img :src="item.src" style="width:300px;height:240px; border:2px solid grey;"></v-img>
           </v-col>
           <v-col class="col-6">
             <v-card-title class="headline" v-text="item.itemname"></v-card-title>
-            <v-card-subtitle v-text="item.price"></v-card-subtitle>
+            
             <div>
               <v-rating v-model="rating"></v-rating>
             </div>
@@ -53,10 +53,10 @@
           </v-col>
           <div class="vertical"></div>
           <v-col class="col-3">
-            <v-card-title v-text="item.company"></v-card-title>
+         <v-card-title v-text="item.price"></v-card-title>
             <v-card-subtitle v-text="item.sitcap"></v-card-subtitle>
           </v-col>
-          <div ></div>
+           <div class="verticalone"></div>
           <v-col class="col=6" >
             <v-card-title v-text="item.company"></v-card-title>
             <v-card-subtitle v-text="item.sitcap"></v-card-subtitle>
@@ -78,7 +78,7 @@
     },
     data: () => ({
       items: [{
-          color: "Blue",
+          color:  "Color: Blue",
           src: "https://images.dealer.com/ddc/vehicles/2019/Hyundai/Santa%20Fe%20XL/SUV/trim_SE_f0031a/color/Becketts%20Black-RB5-8%2C8%2C8-640-en_US.jpg",
           itemname: "Hyundai XL HY01674",
           price: "P1000 per day",
@@ -87,7 +87,7 @@
           sitcap: "4 persons"
         },
         {
-          color: "orange",
+          color: "Colro: orange",
           src: "https://www.suzuki-zambia.com/media/gamme/modeles/graph/2524-photo-suzuki-alto-k10.png",
           itemname: "Zuzuki Alto",
           price: "P1500 per day",
@@ -96,7 +96,7 @@
           sitcap: "4 persons"
         },
         {
-          color: "Black",
+          color: "Color: Black",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQs7kaoUewSBHa7T6rUyWHNdqUuKnCwvuAAexV7xdkPy4w4a2D&s",
           itemname: "Honda XRM 125 DS Fi",
           price: "P1000 per day",
@@ -105,7 +105,7 @@
           sitcap: "2 persons"
         },
         {
-          color: "Black and Red",
+          color: "Color:Black and Red",
           src: "https://hondaph.com/wp-content/uploads/2019/09/XRM_MOTARD_RED.png",
           itemname: "Yamaha FZi",
           price: "P1500 per day",
@@ -114,7 +114,7 @@
           sitcap: "2 persons"
         },
         {
-          color: "white",
+          color: "Color: white",
           src: "http://perthsuretaxi.com/images/ser-img3.jpg",
           itemname: "Taxi Van",
           price: "P2000 per day",
@@ -123,7 +123,7 @@
           sitcap: "8 persons"
         },
         {
-          color: "gray",
+          color: "Color: gray",
           src: "http://toyota.com.ph/wp-content/uploads/2018/06/HH1303-F-01.png",
           itemname: "Foton Trans Van",
           price: "P1000 per day",
@@ -132,7 +132,7 @@
           sitcap: "8 persons"
         },
         {
-          color: "white",
+          color: "Color: white",
           src: "http://designmella.com/images/bus-passenger-bus.png",
           itemname: "Halcyon Days",
           price: "P3000 per day",
@@ -141,7 +141,7 @@
           sitcap: "34 persons"
         },
         {
-          color: "white",
+          color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmCvga2xBbSBzDGZETF_ueWyNWzvGgsgBTiAvT8j96VhHy3h4v&s",
           itemname: "Ceres A5",
           price: "P3500 per day",
@@ -150,7 +150,7 @@
           sitcap: "45 persons"
         },
         {
-          color: "white",
+          color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LkhXzxAXZj8qR4D6rM7QJYMeKtUPlQhzoriPu10GPv4mWOYg&s",
           itemname: "Filipino Banka",
           price: "P5000 per day",
@@ -159,7 +159,7 @@
           sitcap: "8 persons"
         },
         {
-          color: "white",
+          color: "Color: white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxfeR566GQF0vDZJvqq_JZp0ZQAZ-XzCuSkCYVlI717nN-79S&s",
           itemname: "Adventure BAngka",
           price: "P4000 per day",
@@ -183,7 +183,8 @@
     methods: {
       reserved() {
         this.$router.push("/Login");
-      }
+      },
+      
     }
   };
 </script>
@@ -194,7 +195,11 @@
     margin-left: -25%;
     margin-top: 1%;
   }
-
+.verticalone {
+    border-left: 1px solid grey;
+    height: 260px;
+    margin-top: 1%;
+  }
   .container {
     width: 100%;
     margin-left: 5%;
@@ -210,8 +215,9 @@
   }
   .v-card:not(.v-sheet--tile):not(.v-card--shaped) {
     border-radius: 4px;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    margin-left: 5%;
   }
   .theme--light.v-sheet {
     background-color: #FFFFFF;

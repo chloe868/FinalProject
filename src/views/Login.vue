@@ -28,8 +28,8 @@ import AUTH from '../services/auth'
     name:'login',
     data: () => ({
       input: {
-        email: null,
-        password: null
+        email: '',
+        password: ''
       },
       emailRules: [v => !!v || 'Email is required'],
       passwordRules: [ 
@@ -44,14 +44,15 @@ import AUTH from '../services/auth'
       onsubmit(e) {
         e.preventDefault();
         let user=AUTH.login(this.input.email,this.input.password);
-        if(this.input.email===""|| this.input.password===""){
-          alert("Field is required...")
-        }else{
-          AUTH.setUser(user);
-          if(user!==null){
-             this.$router.push("/reserved");
-          }
-        }
+            if(this.input.username===""|| this.input.password===""){
+                alert("Please provide inputs...")
+            }else{
+                AUTH.setUser(user);
+                if(user!==null){
+                    Router.push('/reserved');
+                }
+            }
+        
       },
       register(){
         this.$router.push('/register');
