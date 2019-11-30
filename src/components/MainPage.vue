@@ -49,15 +49,16 @@
           </v-col>
           <div class="vertical"></div>
           <v-col class="col-3">
-            <v-card-title v-text="item.price"></v-card-title><hr>
-            <v-card-subtitle v-text="item.sitcap"></v-card-subtitle>
-            <v-card-subtitle v-text="item.color"></v-card-subtitle>
-            <v-card-subtitle v-text="item.brand"></v-card-subtitle>
+          
+            <v-card-title v-text="item.sitcap"></v-card-title>
+            <v-card-title v-text="item.color"></v-card-title>
+            <v-card-title v-text="item.brand"></v-card-title>
            
           </v-col>
           <div class="verticalone"></div>
           <v-col class="col=6">
             <v-card-title v-text="item.company" class="company"></v-card-title>
+              <v-card-title v-text="item.price" class="price"></v-card-title>
             <v-btn  class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
         </v-row>
@@ -215,8 +216,14 @@
   .theme--light.v-select .v-select__selections {color: rgba(0, 0, 0, 0.87);margin-top: -20px;margin-left: 5%}
   .v-input { margin-top: -14px;}
   .wrn-btn {font-size: 16px; width: 200px;height:70px;font-family: Raleway-SemiBold;}
-  .v-btn:not(.v-btn--round).v-size--default {height: 56px;min-width: 194px;padding: 0 16px;margin-left: 75px;margin-top:130px; }
   #head {background-color: whitesmoke;}
   h1,h2 {font-size: 15px;}
-  .company{margin-left: 75px;margin-top:5px }
+  .company,.price{margin-left: 75px }
+  .primary{margin-top:50px; }
+  .v-btn:not(.v-btn--round).v-size--default[data-v-109177d0] {
+    height: 56px;
+    min-width: 194px;
+    padding: 0 16px;
+    margin-left: 75px;
+    margin-top: 69px;}
 </style>
