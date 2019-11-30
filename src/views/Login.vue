@@ -14,7 +14,6 @@
                 <v-card-text>
                   <v-form>
                     <v-text-field label="Login" name="login" :prepend-icon="'mdi-account'" type="text"></v-text-field>
-
                     <v-text-field
                       id="password"
                       label="Password"
@@ -26,7 +25,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="primary">Login</v-btn>
+                  <v-btn color="primary" @click="login">Login</v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -42,6 +41,11 @@ export default {
   name: "login",
   data: () => ({
     drawer: null
-  })
+  }),
+  methods:{
+      login(){
+        this.$router.push('/reserved');
+      }
+  }
 };
 </script>
