@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <v-card :loading="loading" class="mx-auto my-12" max-width="800">
+  <v-card :loading="loading" class="mx-auto my-12" max-width="800" @click="onsubmit()">
     <v-subheader height="200">
       <h1>Reservation Form</h1>
     </v-subheader>
