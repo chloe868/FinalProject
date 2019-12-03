@@ -102,31 +102,31 @@
     },
     props: [],
     mounted() {
-      if (localStorage.location) {
-        this.location = localStorage.location;
-      }
+      if(localStorage.location){
+        this.location=localStorage.location;
       
-      if (localStorage.date) {
-        this.date = localStorage.date;
-      }
-      if (localStorage.dater) {
-        this.dater = localStorage.dater;
+      
+      }if(localStorage.date){
+        this.date=localStorage.date;
+
+      }if(localStorage.dater){
+        this.dater=locationbar.dater;
       }
     },
     data() {
       return {
         valid: true,
-        locationRules: [v => !!v || "Location is required"],
-        select: null,
+        // locationRules: [v => !!v || "Location is required"],
+        select: "",
         items: ["car", "motorcycle", "van", "bus", "boat"],
-        date: null,
-        dater: null,
-        location: null,
+        date: "",
+        dater: "",
+        location: "",
       };
     },
     methods: {
       search() {
-        localStorage.items = this.items;
+        localStorage.items= this.items;
         localStorage.location = this.location;
         localStorage.date = this.date;
         localStorage.dater = this.dater;
