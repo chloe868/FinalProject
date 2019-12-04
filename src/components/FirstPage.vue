@@ -9,12 +9,12 @@
               <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <div class="form-control search-slt">
-                    <v-select v-model="select" :items="items" :rules="[v => !!v || 'Item is required']" label="Choose items" required></v-select>
+                    <v-select v-model="select" :items="transpo" :rules="[v => !!v || 'Item is required']" label="Options" select return-object required></v-select>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <div class="form-control search-slt">
-                    <v-text-field type="text" v-model="location" name="input-10-1" label="location" />
+                    <v-text-field type="text" v-model="location" @input.native="filter" name="input-10-1" label="location" />
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -29,12 +29,31 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <button type="button" class="btn btn-primary wrn-btn" @click="search()">
-                        <a>search</a>
-                      </button>
+                                <a>search</a>
+                              </button>
                 </div>
               </div>
             </div>
           </div>
+          <!-- <div v-if="filtering">
+                <BusList v-bind:="filterArray" />
+                <div v-if="filterArray.length == 0">
+                  <center><br><br>
+                    <h1>No available bus</h1>
+                  </center>
+                </div>
+              </div>
+              <div v-else-if="filteringbylocation">
+                <BusList v-bind:buses="filterArrayBytime" />
+                <div v-if="filterArrayBytime.length == 0">
+                  <center><br><br>
+                    <h1>No available bus</h1>
+                  </center>
+                </div>
+              </div>
+              <div v-else>
+                <BusList v-bind:buses="buses" />
+              </div> -->
         </form>
       </div>
     </section>
@@ -53,7 +72,7 @@
     font-family: Raleway-SemiBold;
   }
   .datepicker {
-    font-size: 16px;
+    font-size: 20px;
     font-family: Raleway-SemiBold;
   }
   option {
@@ -101,32 +120,33 @@
       Header
     },
     props: [],
-    mounted() {
-      if(localStorage.location){
-        this.location=localStorage.location;
-      
-      
-      }if(localStorage.date){
-        this.date=localStorage.date;
-
-      }if(localStorage.dater){
-        this.dater=locationbar.dater;
-      }
-    },
+    mounted() {},
     data() {
       return {
         valid: true,
         // locationRules: [v => !!v || "Location is required"],
         select: "",
-        items: ["car", "motorcycle", "van", "bus", "boat"],
+        transpo: ["car", "motorcycle", "van", "bus", "boat"],
         date: "",
         dater: "",
         location: "",
       };
     },
+    filters: {
+      capitalize: function(value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      }
+    },
+    computed: {
+      tranpo() {
+        return this.$store.state.options.options;
+      }
+    },
     methods: {
       search() {
-        localStorage.items= this.items;
+        localStorage.items = this.items;
         localStorage.location = this.location;
         localStorage.date = this.date;
         localStorage.dater = this.dater;

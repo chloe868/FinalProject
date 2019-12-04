@@ -12,7 +12,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
               <div class="form-control search-slt">
-                <v-text-field type="text" name="input-10-1" label="location" />
+                <v-text-field  v-model="search" type="text" name="input-10-1" single-line label="location" />
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -32,33 +32,33 @@
         </div>
       </div>
     </form>
-    <v-card class="d-inline-block " v-for="(item, i) in items" :key="i" cols="12">
+    <v-card class="d-inline-block " v-for="(item, i) in items" :key="i"   cols="12">
       <v-container>
         <v-row justify="space-between">
           <v-col class="col-3">
             <v-img :src="item.src" style="width:300px;height:240px; border:2px solid grey;"></v-img>
           </v-col>
           <v-col class="col-6">
-            <v-card-title class="headline" v-text="item.itemname" ></v-card-title>
+            <v-card-title class="headline">{{item.itemname}}</v-card-title>
             <div>
               <v-rating v-model="rating"></v-rating>
             </div>
             <hr style="width:200px;height:5px;" />
-            <v-card-title class="headline" v-text="item.status"></v-card-title>
-            <v-card-title class="headline" v-text="item.location"></v-card-title>
+            <v-card-title class="headline" >Status:{{item.status}}</v-card-title>
+            <v-card-title class="headline" >Location:{{item.location}}</v-card-title>
           </v-col>
           <div class="vertical"></div>
           <v-col class="col-3">
           
-            <v-card-title v-text="item.sitcap"></v-card-title>
-            <v-card-title v-text="item.color"></v-card-title>
-            <v-card-title v-text="item.brand"></v-card-title>
+            <v-card-title >Sitting Capacity:{{item.sitcap}}</v-card-title>
+            <v-card-title >Cplor:{{item.color}}</v-card-title>
+            <v-card-title>Brand:{{item.brand}}</v-card-title>
            
           </v-col>
           <div class="verticalone"></div>
           <v-col class="col=6">
-            <v-card-title v-text="item.company" class="company"></v-card-title>
-              <v-card-title v-text="item.price" class="price"></v-card-title>
+            <v-card-title class="company"> Company:{{item.company}}</v-card-title>
+              <v-card-title  class="price">Price:{{item.price}}</v-card-title>
             <v-btn  class="primary" @click="reserved()">Reserved</v-btn>
           </v-col>
         </v-row>
@@ -77,117 +77,123 @@
       Footer
     },
     data: () => ({
+      search:'',
       items: [{
           status: "available",
           location: "Mandaue,City",
-          color: "Color: Blue",
+          color: " Blue",
           src: "https://images.dealer.com/ddc/vehicles/2019/Hyundai/Santa%20Fe%20XL/SUV/trim_SE_f0031a/color/Becketts%20Black-RB5-8%2C8%2C8-640-en_US.jpg",
           itemname: "Hyundai XL HY01674",
           price: "P1000 per day",
-          brand: "brand: Hyundai ",
+          brand: " Hyundai ",
           company: " Budget car  Rental",
-          sitcap: "Sitting capacity: 4 persons"
+          sitcap: " 4 persons"
         },
         {
           location: "Oslob,Cebu",
           status: "available",
-          color: "Colro: orange",
+          color: " orange",
           src: "https://www.suzuki-zambia.com/media/gamme/modeles/graph/2524-photo-suzuki-alto-k10.png",
           itemname: "Zuzuki Alto",
           price: "P1500 per day",
-          brand: "brand: zuzuki",
+          brand: " zuzuki",
           company: "Zuzuki Company",
-          sitcap: "Sitting capacity: 4 persons"
+          sitcap: " 4 persons"
         },
         {
           location: "Medellin Cebu",
           status: "available",
-          color: "Color: Black",
+          color: " Black",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQs7kaoUewSBHa7T6rUyWHNdqUuKnCwvuAAexV7xdkPy4w4a2D&s",
           itemname: "Honda XRM 125 DS Fi",
           price: "P1000 per day",
-          brand: "brand: Honda",
+          brand: " Honda",
           company: " Motorbike rental ",
-          sitcap: "Sitting capacity: 2 persons"
+          sitcap: " 2 persons"
         },
         {
           location: "Ceby city",
           status: "available",
-          color: "Color:Black and Red",
+          color: "Black and Red",
           src: "https://hondaph.com/wp-content/uploads/2019/09/XRM_MOTARD_RED.png",
           itemname: "Yamaha FZi",
           price: "P1500 per day",
-          brand: "brand: Yamaha",
+          brand: " Yamaha",
           company: "Motorcycle rental ",
-          sitcap: " Sitting capacity:2 persons"
+          sitcap: " 2 persons"
         },
         {
           location: "Mandaue,City",
           status: "available",
-          color: "Color: white",
+          color: "white",
           src: "http://perthsuretaxi.com/images/ser-img3.jpg",
           itemname: "Taxi Van",
           price: "P2000 per day",
-          brand: "brand: toyota",
+          brand: " toyota",
           company: " Rent a Van Cebu",
-          sitcap: " Sitting capacity:8 persons"
+          sitcap: " 8 persons"
         },
         {
           location: "Cebu City",
           status: "available",
-          color: "Color: gray",
+          color: " gray",
           src: "http://toyota.com.ph/wp-content/uploads/2018/06/HH1303-F-01.png",
           itemname: "Foton Trans Van",
           price: "P1000 per day",
-          brand: "brand: nissan",
+          brand: " nissan",
           company: "Mini Van Rental",
-          sitcap: "Sitting capacity: 8 persons"
+          sitcap: " 8 persons"
         },
         {
           location: "Mandaue,City",
           status: "available",
-          color: "Color: white",
+          color: " white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVCmNE5VzQD8YWGKepaPZ6a0ioDKFVB2BDLuWGbZsQu43LR0c&s",
           itemname: "Nathalie Tours",
           price: "P3000 per day",
-          brand: "brand: nathalie ",
+          brand: " nathalie ",
           company: "nathalie tours",
-          sitcap: "Sitting capacity: 34 persons"
+          sitcap: "34 persons"
         },
         {
           location: "Oslob Cebu",
           status: "available",
-          color: "Color: white",
+          color: " white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM1_fR7ilTwIeH9KDiJDiznNEbT7XDA0v5E98o99689wFKWB5how&s",
           itemname: "Catalina Bus Tour",
           price: "P3500 per day",
-          brand: "brand: Catalina",
+          brand: " Catalina",
           company: "Catalina Bus Tours",
-          sitcap: "Sitting capacity: 45 persons"
+          sitcap: "45 persons"
         },
         {
           location: "Medellin",
           status: "available",
-          color: "Color: white",
+          color: " white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LkhXzxAXZj8qR4D6rM7QJYMeKtUPlQhzoriPu10GPv4mWOYg&s",
           itemname: "Filipino Banka",
           price: "P5000 per day",
-          brand: "brand: none",
+          brand: " none",
           company: "Boat Design",
-          sitcap: "Sitting capacity: 8 persons"
+          sitcap: " 8 persons"
         },
         {
           location: "Medellin",
           status: "available",
-          color: "Color: white",
+          color: " white",
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxfeR566GQF0vDZJvqq_JZp0ZQAZ-XzCuSkCYVlI717nN-79S&s",
           itemname: "Adventure BAngka",
           price: "P4000 per day",
-          brand: "brand: none",
+          brand: " none",
           company: "Rise Above",
-          sitcap: "Sitting capacity: 8 persons"
+          sitcap: " 8 persons"
         },
       ],
+      filteredList() {
+      return this.postList.filter(post => {
+        return post.title.toLowerCase().includes(this.search.toLowerCase())
+      })
+      },
       select: null,
       itemsone: ['car','motorcycle','van','bus','boat' ],
       date: new Date(),
