@@ -6,7 +6,7 @@
           <v-col cols="12" sm="8" md="5">
             <v-card class="elevation-12">
               <v-toolbar color="primary" dark flat>
-                <v-toolbar-title>SIGNUP</v-toolbar-title>
+                <v-toolbar-title>REGISTER TO ABANG</v-toolbar-title>
                 <v-spacer/>
               </v-toolbar>
               <v-card-text>

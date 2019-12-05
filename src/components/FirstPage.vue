@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header id="header"></Header>
     <section class="search-sec">
       <div class="container">
         <form action="#" method="post" novalidate="novalidate">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <div class="form-control search-slt">
-                    <v-text-field type="text" v-model="location" @input.native="filter" name="input-10-1" label="location" />
+                    <v-text-field type="text" v-model="location"  name="input-10-1" label="location" />
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -29,13 +29,12 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <button type="button" class="btn btn-primary wrn-btn" @click="search()">
-                                <a>search</a>
-                              </button>
+                                  <a>Search</a>
+                                </button>
                 </div>
               </div>
             </div>
           </div>
-
         </form>
       </div>
     </section>
@@ -48,7 +47,7 @@
     font-family: Raleway-SemiBold;
   }
   .wrn-btn {
-    font-size: 16px;
+    font-size: 35px;
     width: 200px;
     height: 70px;
     font-family: Raleway-SemiBold;
@@ -77,6 +76,7 @@
     margin-right: -35px;
     margin-left: 20px;
   }
+
   .container {
     width: 100%;
     margin-top: 270px;
@@ -103,7 +103,6 @@
     },
     props: [],
     mounted() {
-
     },
     data() {
       return {
@@ -130,10 +129,6 @@
     },
     methods: {
       search() {
-        localStorage.items = this.items;
-        localStorage.location = this.location;
-        localStorage.date = this.date;
-        localStorage.dater = this.dater;
         this.$router.push(`/mainpage/${this.select}`);
       }
     }
