@@ -224,7 +224,7 @@
       this.items = this.items.filter(item => {
         if (this.$route.params.filter) {
           return (
-            item.type.toLowerCase().includes(this.$route.params.filter.toLowerCase())
+            item.type.toLowerCase().includes(this.$route.params.filter.toLowerCase()) 
           );
         } else {
           return item
@@ -262,10 +262,6 @@
     margin-left: 5%;
     margin-right: 5%;
   }
-  .company[data-v-109177d0],
-  .price[data-v-109177d0] {
-    margin-left: 4px;
-  }
   .row[data-v-109177d0] {
     margin-right: -35px;
     margin-left: -65px;
@@ -294,9 +290,6 @@
     border-color: #1E90FF;
     height: 290px;
     color: rgba(0, 0, 0, 0.87);
-  }
-  .v-label {
-    font-size: 30px;
   }
   .row {
     margin-right: -12px;

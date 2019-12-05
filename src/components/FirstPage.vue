@@ -47,7 +47,7 @@
     font-family: Raleway-SemiBold;
   }
   .wrn-btn {
-    font-size: 35px;
+    font-size: 30px;
     width: 200px;
     height: 70px;
     font-family: Raleway-SemiBold;

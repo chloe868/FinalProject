@@ -120,4 +120,10 @@ h2 {
   font-size: 15px;
   margin-left: 20%;
 }
+h1{
+  font-size: 20px;
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium'
+  
+}
 </style>
