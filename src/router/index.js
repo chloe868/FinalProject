@@ -20,8 +20,9 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
-    path:"/mainpage",
+    path:"/mainpage/:filter?",
     name:"mainpage",
+   
     component:MainPage,
     meta: {
         tokenRequired: false

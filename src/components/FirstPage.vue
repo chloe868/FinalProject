@@ -35,25 +35,7 @@
               </div>
             </div>
           </div>
-          <!-- <div v-if="filtering">
-                <BusList v-bind:="filterArray" />
-                <div v-if="filterArray.length == 0">
-                  <center><br><br>
-                    <h1>No available bus</h1>
-                  </center>
-                </div>
-              </div>
-              <div v-else-if="filteringbylocation">
-                <BusList v-bind:buses="filterArrayBytime" />
-                <div v-if="filterArrayBytime.length == 0">
-                  <center><br><br>
-                    <h1>No available bus</h1>
-                  </center>
-                </div>
-              </div>
-              <div v-else>
-                <BusList v-bind:buses="buses" />
-              </div> -->
+
         </form>
       </div>
     </section>
@@ -120,7 +102,9 @@
       Header
     },
     props: [],
-    mounted() {},
+    mounted() {
+
+    },
     data() {
       return {
         valid: true,
@@ -150,7 +134,7 @@
         localStorage.location = this.location;
         localStorage.date = this.date;
         localStorage.dater = this.dater;
-        this.$router.push("/mainpage");
+        this.$router.push(`/mainpage/${this.select}`);
       }
     }
   };
