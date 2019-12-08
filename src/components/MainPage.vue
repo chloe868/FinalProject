@@ -20,7 +20,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
               <div class="form-control search-slt">
-                <v-text-field type="text" v-model="location" name="input-10-1" label="location" />
+                <v-text-field type="text" v-model="location" name="input-10-1" label="location"/>
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -65,7 +65,7 @@
             <div>
               <v-rating v-model="rating"></v-rating>
             </div>
-            <hr style="width:200px;height:5px;color:dodgerblue " />
+            <hr style="width:200px;height:5px;color:dodgerblue ">
             <v-card-title class="headline">Status:{{item.status}}</v-card-title>
             <v-card-title class="headline">Location:{{item.location1}}</v-card-title>
           </v-col>
@@ -85,9 +85,9 @@
         </v-row>
       </v-container>
     </v-card>
-    <br />
-    <br />
-    <br />
+    <br>
+    <br>
+    <br>
     <Footer></Footer>
   </div>
 </template>
@@ -101,8 +101,7 @@ export default {
   },
   data: () => ({
     select: "",
-    location: "",
-    valid: true,
+    location:"",
     items: [
       {
         status: "available",
@@ -248,7 +247,7 @@ export default {
   methods: {
     search() {
       this.$router.push(`/mainpage/${this.select}`);
-      // this.filterSearch();
+      this.filterSearch();
     },
     reserved() {
       this.$router.push("/Login");
@@ -268,9 +267,9 @@ export default {
   mounted() {
     this.filterSearch();
   },
-updated(){
-  this.filterSearch()
-},
+  // updated() {
+  //   this.filterSearch();
+  // },
   filters: {
     capitalize: function(value) {
       if (!value) return "";

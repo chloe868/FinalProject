@@ -6,7 +6,7 @@
         <form action="#" method="post" novalidate="novalidate">
           <div class="row-one">
             <div class="col-lg-12">
-                      <h2 style="margin-left:530px;">Find the best service we had...</h2>
+                      <!-- <h2 style="margin-left:530px;">Find the best service we had...</h2> -->
               <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                   <div class="form-control search-slt">
