@@ -1,7 +1,11 @@
 <template>
   <div>
     <Header id="head"></Header>
-    <form action="#" method="post" novalidate="novalidate">
+    <form
+      action="#"
+      method="post"
+      novalidate="novalidate"
+    >
       <div class="row-one">
         <div class="col-lg-12">
           <div class="row">
@@ -20,7 +24,12 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
               <div class="form-control search-slt">
-                <v-text-field type="text" v-model="location" name="input-10-1" label="location"/>
+                <v-text-field
+                  type="text"
+                  v-model="location"
+                  name="input-10-1"
+                  label="location"
+                />
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
@@ -46,7 +55,11 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-              <button type="button" class="btn btn-primary wrn-btn" @click="search()">
+              <button
+                type="button"
+                class="btn btn-primary wrn-btn"
+                @click="search()"
+              >
                 <a>Search</a>
               </button>
             </div>
@@ -54,11 +67,24 @@
         </div>
       </div>
     </form>
-    <v-card class="d-inline-block" v-for="(item, i) in items" :key="i" cols="12">
+    <div
+      class="h1 text-center"
+      v-if="filteredList.length == 0"
+    > <br><br>No results found</div>
+    <v-card
+      v-else
+      class="d-inline-block"
+      v-for="(item, i) in filteredList"
+      :key="i"
+      cols="12"
+    >
       <v-container>
         <v-row justify="space-between">
           <v-col class="col-3">
-            <v-img :src="item.src" style="width:300px;height:240px; border:2px solid grey;"></v-img>
+            <v-img
+              :src="item.src"
+              style="width:300px;height:240px; border:2px solid grey;"
+            ></v-img>
           </v-col>
           <v-col class="col-6">
             <v-card-title class="headline">{{item.itemname}}</v-card-title>
@@ -80,7 +106,10 @@
           <v-col class="col=6">
             <v-card-title class="company">Company:{{item.company}}</v-card-title>
             <v-card-title class="price">Price:{{item.price}}</v-card-title>
-            <v-btn class="primary" v-on:click="reserved()">Reserved</v-btn>
+            <v-btn
+              class="primary"
+              v-on:click="reserved(item._id)"
+            >Reserved</v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -91,6 +120,7 @@
     <Footer></Footer>
   </div>
 </template>
+
 <script>
 import Header from "../components/Header.vue";
 // import Footer from "../components/Footer.vue";
@@ -99,11 +129,21 @@ export default {
     Header
     // Footer
   },
+  props: {
+    name: String,
+    value: null,
+    id: String,
+    disabled: Boolean,
+    required: Boolean
+  },
   data: () => ({
-    select: "",
-    location:"",
+    select: null,
+    location: "",
+    temp_value: null,
+    ratings: [1, 2, 3, 4, 5],
     items: [
       {
+        _id: 1,
         status: "available",
         location1: "Mandaue,City",
         color: " Blue",
@@ -234,38 +274,61 @@ export default {
     ],
     transpo: ["car", "motorcycle", "van", "bus", "boat"],
     date: new Date(),
-    dater: new Date(),
-    rating: 3
+    dater: new Date()
   }),
-  filteredList() {
-    return this.items.filter(post => {
-      return post.type
-        .toLowerCase()
-        .includes(this.$route.params.filter.toLowerCase());
-    });
-  },
-  methods: {
-    search() {
-      this.$router.push(`/mainpage/${this.select}`);
-      this.filterSearch();
-    },
-    reserved() {
-      this.$router.push("/Login");
-    },
-    filterSearch() {
-      this.items = this.items.filter(item => {
+  computed: {
+    filteredList() {
+      return this.items.filter(item => {
         if (this.$route.params.filter) {
-          return item.type
-            .toLowerCase()
-            .includes(this.$route.params.filter.toLowerCase());
+          return item.type == this.$route.params.filter;
         } else {
           return item;
         }
       });
+    },
+    tranpo() {
+      return this.$store.state.options.options;
+    }
+  },
+
+  methods: {
+    star_over: function(index) {
+      var self = this;
+      if (!this.disabled) {
+        this.temp_value = this.value;
+        return (this.value = index);
+      }
+    },
+    star_out: function() {
+      var self = this;
+      if (!this.disabled) {
+        return (this.value = this.temp_value);
+      }
+    },
+    set: function(value) {
+      var self = this;
+      if (!this.disabled) {
+        this.temp_value = value;
+        return (this.value = value);
+      }
+    },
+    search() {
+      if (this.select !== this.$route.params.filter) {
+        this.$router.push(`/mainpage/${this.select}`);
+      }
+    },
+
+    reserved(id) {
+      sessionStorage.setItem("item_id", id);
+      if (!loggedIn) {
+        this.$router.push("/login");
+      } else {
+        this.$router.push("/reserved/"+id);
+      }
     }
   },
   mounted() {
-    this.filterSearch();
+    this.select = this.$route.params.filter ? this.$route.params.filter : "";
   },
   // updated() {
   //   this.filterSearch();
@@ -276,45 +339,47 @@ export default {
       value = value.toString();
       return value.charAt(0).toUpperCase() + value.slice(1);
     }
-  },
-  computed: {
-    tranpo() {
-      return this.$store.state.options.options;
-    }
   }
 };
 </script>
+
 <style scoped>
 .title {
   font-size: 40px;
   font-family: "Courier New", Courier, monospace;
 }
+
 .vertical {
   border-left: 1px solid grey;
   height: 260px;
   margin-left: -27%;
   margin-top: 0.5%;
 }
+
 .verticalone {
   border-left: 1px solid grey;
   height: 260px;
   margin-top: 0.5%;
 }
+
 .container {
   width: 100%;
   margin-left: 5%;
   margin-right: 5%;
 }
+
 .row[data-v-109177d0] {
   margin-right: -35px;
   margin-left: -65px;
   margin-top: -1px;
 }
+
 .row-one[data-v-109177d0][data-v-109177d0] {
   margin-right: 12%;
   margin-left: 15%;
   margin-top: 5%;
 }
+
 .v-card[data-v-109177d0]:not(.v-sheet--tile):not(.v-card--shaped) {
   border-radius: 4px sp;
   width: 85%;
@@ -322,63 +387,76 @@ export default {
   margin-left: 8%;
   /* border: 2px solid dodgerblue; */
 }
+
 .search-slt[data-v-109177d0][data-v-109177d0] {
   width: 90%;
   height: 70px;
   font-family: Raleway-SemiBold;
   /* border: 2px solid dodgerblue; */
 }
+
 .theme--light.v-sheet {
   background-color: #ffffff;
   border-color: #1e90ff;
   height: 290px;
   color: rgba(0, 0, 0, 0.87);
 }
+
 .row {
   margin-right: -12px;
   margin-left: -12px;
   margin-top: 50px;
 }
+
 .search-slt {
   width: 90%;
   height: 70px;
   font-family: Raleway-SemiBold;
 }
+
 .datepicker {
   font-size: 16px;
   font-family: Raleway-SemiBold;
 }
+
 .col-lg-3 {
   -ms-flex: 0 0 25%;
   -webkit-box-flex: 0;
   flex: 0 0 20%;
   width: 5%;
 }
+
 .theme--light.v-select .v-select__selections {
   color: rgba(0, 0, 0, 0.87);
   margin-top: -20px;
   font-size: 25px;
 }
+
 .wrn-btn {
   font-size: 35px;
   width: 200px;
   height: 70px;
   font-family: Raleway-SemiBold;
 }
+
 #head {
   background-color: whitesmoke;
 }
+
 h1,
 h2 {
   font-size: 15px;
 }
+
 .company,
 .price {
   margin-left: 75px;
 }
+
 .primary {
   margin-top: 50px;
 }
+
 .v-btn:not(.v-btn--round).v-size--default[data-v-109177d0] {
   height: 56px;
   min-width: 194px;

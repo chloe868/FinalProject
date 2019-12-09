@@ -25,7 +25,7 @@
                 <input type="checkbox" class="form-check-input">
                 <small>Remember Me</small>
               </label>
-              <button type="submit" class="btn btn-login float-right">Submit</button>
+              <button type="submit" class="btn btn-login float-right" v-on:click="submit()">Submit</button>
             </div>
             <br>
             <br>
@@ -44,8 +44,8 @@
                 >
                 <div class="carousel-caption d-none d-md-block">
                   <div class="banner-text">
-                    <h2>ABANG</h2>
-                    <p>We Keep You Moving</p>
+                    <h2><img src="https://lh3.googleusercontent.com/-JE8EnkoJfs4/XdNtJ5QuntI/AAAAAAAACjM/99vSSc4c6xcuz2MBNlVVXV63lXTPs9jugCK8BGAsYHg/s0/2019-11-18.png"/></h2>
+                  
                   </div>
                 </div>
               </div>
@@ -59,21 +59,17 @@
 </template>
 <style scoped>
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
-.login-block {
-  background: #1E90FF; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #31a0cc,
-    #405bcf
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #31a0cc,
-    #405bcf
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  float: left;
-  width: 100%;
-  padding: 50px 0;
+.login-block[data-v-63ae9146] {
+    background: #1E90FF;
+    background: -webkit-gradient( linear, left top, left bottom, from(#1E90FF), to(#0000FF) );
+    background: linear-gradient( to bottom, #1E90FF, #0000FF );
+    /* float: left; */
+    width: 90%;
+    height: 85%;
+    margin-top: 6.5%;
+    margin-left: 5%;
+    /* margin-right: 45%; */
+    padding: 50px 0;
 }
 /* .banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;} */
 .container {
@@ -84,6 +80,10 @@
 .carousel-inner {
   border-radius: 0 10px 10px 0;
 }
+.container {
+    max-width: 1141px;
+    height: 99%;
+}
 .carousel-caption {
   text-align: left;
   left: 5%;
@@ -91,6 +91,10 @@
 .login-sec {
   padding: 50px 30px;
   position: relative;
+}
+.img-fluid {
+    width: 98%;
+    height: 714px;
 }
 .login-sec .copy-text {
   position: absolute;
@@ -109,13 +113,13 @@
   margin-bottom: 30px;
   font-weight: 800;
   font-size: 30px;
-  color: #de6262;
+  color: dodgerblue;
 }
 .login-sec h2:after {
   content: " ";
   width: 100px;
   height: 5px;
-  background: #feb58a;
+  background:dodgerblue;
   display: block;
   margin-top: 20px;
   border-radius: 3px;
@@ -123,7 +127,7 @@
   margin-right: auto;
 }
 .btn-login {
-  background: #de6262;
+  background: dodgerblue;
   color: #fff;
   font-weight: 600;
 }
@@ -133,7 +137,6 @@
 .banner-text p{color:#fff;} */
 </style>
 <script>
-
 import axios from "axios";
 export default {
   props: {
